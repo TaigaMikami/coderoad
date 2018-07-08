@@ -1,0 +1,9 @@
+{
+	"version": 3,
+	"file": "../../Users/mikamitaiga/Desktop/Django/workspace/django-project/coderoad/assets/css/coderoad.css",
+	"sources": [
+		"../../Users/mikamitaiga/Desktop/Django/workspace/django-project/coderoad/assets/css/coderoad.scss"
+	],
+	"names": [],
+	"mappings": "AAAA,AAAA,KAAK,AAAC,CACJ,gBAAgB,CAAE,sBAAsB,CAUzC,AAXD,AAEE,KAFG,CAEH,EAAE,AAAC,CACD,KAAK,CAAE,KAAK,CACb,AAJH,AAKE,KALG,CAKH,CAAC,AAAC,CACA,KAAK,CAAE,KAAK,CACb,AAPH,AAQE,KARG,CAQH,KAAK,AAAC,CACJ,KAAK,CAAE,gBAAgB,CACxB,AAGH,AAAA,aAAa,AAAC,CACZ,gBAAgB,CAAE,OAAO,CAC1B,AAED,AAAA,YAAY,AAAC,CACX,gBAAgB,CAAE,OAAO,CAC1B"
+}

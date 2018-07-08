@@ -7,17 +7,17 @@
 	<div class="collapse navbar-collapse" id="navbarSupportedContent">
 		<ul class="navbar-nav mr-auto">
 			<li class="nav-item active">
-				<a class="nav-link" href="{% url 'tutorial:index' %}">Home</a>
+				<a class="nav-link" href="{% url 'tutorial:index' %}">ホーム</a>
 			</li>
 			{% if user.is_superuser %}
 			<li class="nav-item">
-				<a class="nav-link" href="{% url 'admin:index' %}">Admin</a>
+				<a class="nav-link" href="{% url 'admin:index' %}">管理者</a>
 			</li>
 			{% endif %}
 		</ul>
-		<form class="form-inline my-2 my-lg-0" action="{% url 'tutorial:index' %}">
-			<input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search" name="keyword">
-			<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+		<form class="form-inline my-2 my-lg-0" method="GET" action="{% url 'tutorial:index' %}">
+			<input class="form-control mr-sm-2" type="text" placeholder="キーワード" aria-label="Search" name="keyword">
+			<button class="btn btn-success my-2 my-sm-0" type="submit">調べる</button>
 		</form>
 	</div>
 </nav>

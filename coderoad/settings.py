@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'sass_processor',
     'tutorial'
 ]
 
@@ -136,3 +137,10 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.normpath(os.path.join(BASE_DIR, "assets")),
 )
+
+# Sass(SCSS)
+SASS_PROCESSOR_ROOT = os.path.join(BASE_DIR, 'assets')
+SASS_PROCESSOR_INCLUDE_FILE_PATTERN = r'^.+\.(sass|scss)$'
+SASS_PRECISION = 8
+SASS_OUTPUT_STYLE = 'compressed'
+SASS_TEMPLATE_EXTS = ['.html', '.haml']

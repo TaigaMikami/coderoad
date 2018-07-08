@@ -1,5 +1,15 @@
 .hero {
   background-image: url("../img/hero.jpg");
+
+  h1 {
+    color: white;
+  }
+  p {
+    color: white;
+  }
+  .my-2 {
+    color: white !important;
+  }
 }
 
 .bg-main-pink {
