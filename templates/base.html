@@ -52,7 +52,7 @@
 		</div>
 		<div class="col-md-2">
 			<ul class="list-group">
-			<li class="list-group-item bg-pre-pink text-white">カテゴリー一覧</li>
+			<li class="list-group-item bg-info text-white">カテゴリー</li>
 				{% for category in category_list %}
 					<li class="list-group-item text-dark">
 						<a href="{% url 'tutorial:category' category.pk  %}" class="text-dark">{{ category }}</a>
