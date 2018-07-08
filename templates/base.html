@@ -14,7 +14,10 @@
 	
 	<!-- Bootstrap Core CSS -->
 	<link href="{% static 'vendor/bootstrap/css/bootstrap.css' %}" rel="stylesheet">
-	
+
+	<!-- Custom CSS -->
+	<link href="{% static 'css/coderoad.css' %}" rel="stylesheet">
+
 	<!-- Custom Fonts -->
 		<link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 		<link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
@@ -42,13 +45,13 @@
 
 <div class="container">
 	<div class="row">
-		<div class="col-md-8">
+		<div class="col-md-10">
 			{% block content %}
 			{% endblock %}
 		</div>
-		<div class="col-md-4">
+		<div class="col-md-2">
 			<ul class="list-group">
-			<li class="list-group-item bg-dark text-white">カテゴリー一覧</li>
+			<li class="list-group-item bg-pre-pink text-white">カテゴリー一覧</li>
 				{% for category in category_list %}
 					<li class="list-group-item">
 {#					TODO#}
@@ -60,9 +63,8 @@
 	</div>
 </div>
 
-<footer class="bg-dark text-white text-center py-4">
-	<p>taiga mikami</p>
-</footer>
+<!-- footer -->
+{% include "footer.html" %}
 
 <!-- jQuery -->
 <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
