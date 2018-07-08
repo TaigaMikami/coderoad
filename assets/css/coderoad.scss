@@ -1,3 +1,7 @@
+body {
+  background-color: #F2F2F5;
+}
+
 .hero {
   border-radius: 0;
   background-image: url("../img/hero.jpg");
@@ -25,6 +29,27 @@
   background-color: #F08080;
 }
 
+
+// card
 .bg-pre-pink {
   background-color: #E07070;
+}
+
+.card {
+  h6 {
+    border-radius: 0 !important;
+  }
+  border-radius: 0;
+}
+
+
+
+// footer
+footer {
+  .text-right {
+    padding-right: 20px;
+    a {
+      color: white;
+    }
+  }
 }
