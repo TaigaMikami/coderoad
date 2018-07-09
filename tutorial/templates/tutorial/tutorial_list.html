@@ -10,8 +10,7 @@
 					<label for="" class="btn-sm bg-info text-white">{{ tag.name }}</label>
 				{% endfor %}
 				<br>
-{#				<p>{{ tutorial.created_at }}</p>#}
-				<a href="" class="btn bg-pre-pink text-white">続きを見る</a>
+				<a href="{% url 'tutorial:detail' tutorial.pk %}" class="btn bg-pre-pink text-white">続きを見る</a>
 				☆×<label for="">{{ tutorial.star }}</label>
 			</div>
 		</div>

@@ -28,3 +28,6 @@ class CategoryView(generic.ListView):
     queryset = Tutorial.objects.order_by('-created_at').filter(category__pk=category_pk)
     return queryset
 
+
+class DetailView(generic.DetailView):
+  model = Tutorial

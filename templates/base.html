@@ -18,6 +18,7 @@
 
 	<!-- Custom CSS -->
 	<link href="{% sass_src 'css/coderoad.scss' %}" rel="stylesheet">
+	<link rel="icon" href="{% static 'img/favicon.ico' %}">
 
 	<!-- Custom Fonts -->
 		<link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -39,7 +40,7 @@
 {% include "navi.html" %}
 
 <div class="jumbotron hero">
-	<h1 class="display-3">coderoad</h1>
+	<h1 class="display-3"><img src="{% static 'img/coderoad-logo-white.png' %}" alt="" class="hero-logo"></h1>
 	<p class="lead">プログラミングの学習の手助けをします。</p>
 	<hr class="my-2">
 </div>
