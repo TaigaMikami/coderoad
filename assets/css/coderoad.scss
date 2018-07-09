@@ -25,6 +25,10 @@ body {
   }
 }
 
+.container {
+  padding-bottom: 140px;
+}
+
 .bg-main-pink {
   background-color: #F08080;
 }
@@ -57,4 +61,10 @@ footer {
       color: white;
     }
   }
+}
+
+.footer {
+  width: 100%;
+  position: fixed !important;
+  bottom:0 !important;
 }
