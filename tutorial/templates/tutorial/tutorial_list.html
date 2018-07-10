@@ -4,13 +4,13 @@
 	<div class="card-columns">
 	{% for tutorial in tutorial_list %}
 		<div class="card mb-2">
-			<h6 class="card-header bg-pre-pink text-white">{{ tutorial.name }}</h6>
+			<h6 class="card-header bg-pre-pink text-white">{{ tutorial.title }}</h6>
 			<div class="card-body">
 				{% for tag in tutorial.category.all %}
 					<label for="" class="btn-sm bg-info text-white">{{ tag.name }}</label>
 				{% endfor %}
 				<br>
-				<a href="{% url 'tutorial:detail' tutorial.pk %}" class="btn bg-pre-pink text-white">続きを見る</a>
+				<a href="{% url 'tutorial:detail_and_create' tutorial.pk %}" class="btn bg-pre-pink text-white">続きを見る</a>
 				☆×<label for="">{{ tutorial.star }}</label>
 			</div>
 		</div>

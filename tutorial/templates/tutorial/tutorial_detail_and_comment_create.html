@@ -14,7 +14,19 @@
 			<p>{{ tutorial.created_at }}</p>
 		</div>
 	</div>
-	
+
+	<br>
+	{% for comment in tutorial.comment_set.all %}
+	<div class="card">
+		<div class="card-body">
+			<h6 class="card-subtitle mb-2 text-muted">{{ comment.name }}</h6>
+			<p class="card-text">
+				{{ comment.text }}
+			</p>
+		</div>
+	</div>
+	{% endfor %}
+
 	<form action="" method="POST">
 		{{ form.non_field_errors }}
 		{% for field in form %}

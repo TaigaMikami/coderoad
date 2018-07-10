@@ -11,7 +11,7 @@ class Category(models.Model):
   
 class Tutorial(models.Model):
   """チュートリアル"""
-  name = models.CharField('タイトル', max_length=255)
+  title = models.CharField('タイトル', max_length=255)
   url = models.URLField('URL')
   description = models.TextField('内容', blank=True)
   star = models.IntegerField('スター', blank=True)
@@ -21,13 +21,13 @@ class Tutorial(models.Model):
   )
 
   def __str__(self):
-    return self.name
+    return self.title
 
 class Comment(models.Model):
   '''チュートリアルに対するコメント'''
   name = models.CharField('お名前', max_length=30, default='名無し')
   text = models.TextField('本文')
-  tutorial = models.ForeignKey(Tutorial, verbose_name='紐づくチュートリアル', on_delete=models.PROTECT)
+  tutorial = models.ForeignKey(Tutorial, verbose_name='紐づく記事', on_delete=models.PROTECT)
   created_at = models.DateField('作成日', default=timezone.now)
   
   def __str__(self):
