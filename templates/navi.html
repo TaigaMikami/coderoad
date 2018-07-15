@@ -32,6 +32,11 @@
 				<li class="nav-item">
 					<a class="nav-link" href="{% url 'accounts:signup' %}">サインイン</a>
 				</li>
+				<li class="nav-item">
+					<button type="button" onclick="location.href='{% url 'social:begin' 'github' %}'">
+						GitHubアカウントでログイン！
+					</button>
+				</li>
 			{% endif %}
 		</ul>
 

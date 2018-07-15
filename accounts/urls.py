@@ -25,4 +25,9 @@ urlpatterns = [
   #
   # path('reset/<uidb64>/<token>/', PasswordResetConfirmView.as_view(), name='password_reset_confirm'),
   # path('reset/done/', PasswordResetCompleteView.as_view(), name='password_reset_complete'),
+  # path("login/<provider>", views.auth, name="begin"),
+  # path("complete/<provider>", views.complete, name="complete"),
+  # path("disconnect/<provider>", views.disconnect, name="disconnect"),
+  # path("disconnect/<provider>/<int:association_id>", views.disconnect,
+  #      name="disconnect_individual"),
 ]

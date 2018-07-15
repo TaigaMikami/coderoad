@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django_extensions',
     'sass_processor',
+    'social_django',
     'accounts',
     'tutorial',
 ]
@@ -68,7 +69,9 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                'tutorial.context_processors.common'
+                'tutorial.context_processors.common',
+                'social_django.context_processors.backends',
+                'social_django.context_processors.login_redirect',
             ],
         },
     },
@@ -118,7 +121,9 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 AUTHENTICATION_BACKENDS = [
-    'accounts.backends.EmailOrUsernameModelBackend'
+    'accounts.backends.EmailOrUsernameModelBackend',
+    'social_core.backends.github.GithubOAuth2',
+    'django.contrib.auth.backends.ModelBackend',
 ]
 
 # Internationalization
@@ -149,6 +154,9 @@ SASS_PROCESSOR_INCLUDE_FILE_PATTERN = r'^.+\.(sass|scss)$'
 SASS_PRECISION = 8
 SASS_OUTPUT_STYLE = 'compressed'
 SASS_TEMPLATE_EXTS = ['.html', '.haml']
+
+SOCIAL_AUTH_GITHUB_KEY = '3c8cea675221aeb8e138'
+SOCIAL_AUTH_GITHUB_SECRET = '3711b12d83549fa3eba1e38573ebc4b3ed936be0'
 
 # ログイン後トップページにリダイレクト
 LOGIN_REDIRECT_URL = '/'
