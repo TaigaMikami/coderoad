@@ -1,8 +1,8 @@
 {
 	"version": 3,
-	"file": "../../Users/mikamitaiga/Desktop/Django/workspace/django-project/coderoad/assets/css/coderoad.css",
+	"file": "../../Users/mikamitaiga/Desktop/Django/workspace/django-project/coderoad/coderoad/assets/css/coderoad.css",
 	"sources": [
-		"../../Users/mikamitaiga/Desktop/Django/workspace/django-project/coderoad/assets/css/coderoad.scss"
+		"../../Users/mikamitaiga/Desktop/Django/workspace/django-project/coderoad/coderoad/assets/css/coderoad.scss"
 	],
 	"names": [],
 	"mappings": "AAAA,AAAA,IAAI,AAAC,CACH,gBAAgB,CAAE,OAAO,CAC1B,AAGD,AAAA,SAAS,AAAC,CACR,MAAM,CAAE,IAAI,CACb,AACD,AAAA,UAAU,AAAC,CACT,gBAAgB,CAAE,OAAO,CAC1B,AAED,AAAA,KAAK,AAAC,CACJ,aAAa,CAAE,CAAC,CAChB,gBAAgB,CAAE,sBAAsB,CAExC,mBAAmB,CAAE,aAAa,CAElC,iBAAiB,CAAE,SAAS,CAE5B,qBAAqB,CAAE,KAAK,CAE5B,eAAe,CAAE,KAAK,CAWvB,AArBD,AAYE,KAZG,CAYH,EAAE,AAAC,CACD,KAAK,CAAE,KAAK,CACb,AAdH,AAeE,KAfG,CAeH,CAAC,AAAC,CACA,KAAK,CAAE,KAAK,CACb,AAjBH,AAkBE,KAlBG,CAkBH,KAAK,AAAC,CACJ,KAAK,CAAE,gBAAgB,CACxB,AAGH,AAAA,UAAU,AAAC,CACT,cAAc,CAAE,KAAK,CACtB,AAED,AAAA,aAAa,AAAC,CACZ,gBAAgB,CAAE,OAAO,CAC1B,AAID,AAAA,YAAY,AAAC,CACX,gBAAgB,CAAE,OAAO,CAC1B,AAED,AAAA,KAAK,AAAC,CAQJ,UAAU,CAAE,oBAAoB,CAChC,aAAa,CAAE,CAAC,CACjB,AAVD,AACE,KADG,CACH,EAAE,AAAC,CACD,aAAa,CAAE,YAAY,CAC5B,AAHH,AAIE,KAJG,CAIH,IAAI,AAAC,CACH,aAAa,CAAE,CAAC,CAChB,UAAU,CAAE,YAAY,CACzB,AAQH,AACE,MADI,CACJ,WAAW,AAAC,CACV,aAAa,CAAE,IAAI,CAIpB,AANH,AAGI,MAHE,CACJ,WAAW,CAET,CAAC,AAAC,CACA,KAAK,CAAE,KAAK,CACb,AAIL,AAAA,OAAO,AAAC,CACN,KAAK,CAAE,IAAI,CAEX,MAAM,CAAC,YAAY,CACpB"
