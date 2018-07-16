@@ -19,7 +19,7 @@
 	{% for comment in tutorial.comment_set.all %}
 	<div class="card">
 		<div class="card-body">
-			<h6 class="card-subtitle mb-2 text-muted">{{ comment.name }}</h6>
+			<h6 class="card-subtitle mb-2 text-muted">{{ comment.user.username }}</h6>
 			<p class="card-text">
 				{{ comment.text }}
 			</p>
