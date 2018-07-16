@@ -8,17 +8,38 @@
 	<div class="collapse navbar-collapse" id="navbarSupportedContent">
 		<ul class="navbar-nav mr-auto">
 			<li class="nav-item active">
-				<a class="nav-link" href="{% url 'tutorial:index' %}">ホーム</a>
+				<a class="nav-link" href="{% url 'tutorial:index' %}">チュートリアル一覧</a>
 			</li>
+			<form class="form-inline my-2 my-lg-0" method="GET" action="{% url 'tutorial:index' %}">
+				<input class="form-control mr-sm-2" type="text" placeholder="キーワード" aria-label="Search" name="keyword">
+				<button class="btn btn-success my-2 my-sm-0" type="submit">調べる</button>
+			</form>
+		</ul>
+		<ul class="navbar-nav navbar-right">
 			{% if user.is_superuser %}
 			<li class="nav-item">
 				<a class="nav-link" href="{% url 'admin:index' %}">管理者</a>
 			</li>
 			{% endif %}
+			{% if user.is_authenticated %}
+				<li class="nav-item">
+					<a class="nav-link" href="{% url 'accounts:logout' %}">ログアウト</a>
+				</li>
+			{% else %}
+				<li class="nav-item">
+					<a class="nav-link" href="{% url 'accounts:login' %}">ログイン</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="{% url 'accounts:signup' %}">サインイン</a>
+				</li>
+				<li class="nav-item">
+					<button type="button" onclick="location.href='{% url 'social:begin' 'github' %}'">
+						GitHubアカウントでログイン！
+					</button>
+				</li>
+			{% endif %}
 		</ul>
-		<form class="form-inline my-2 my-lg-0" method="GET" action="{% url 'tutorial:index' %}">
-			<input class="form-control mr-sm-2" type="text" placeholder="キーワード" aria-label="Search" name="keyword">
-			<button class="btn btn-success my-2 my-sm-0" type="submit">調べる</button>
-		</form>
+
+
 	</div>
 </nav>

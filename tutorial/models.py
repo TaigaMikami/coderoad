@@ -1,5 +1,6 @@
 from django.db import models
 from django.utils import timezone
+from django.contrib.auth.models import User
 
 class Category(models.Model):
   """カテゴリ"""
@@ -25,8 +26,8 @@ class Tutorial(models.Model):
 
 class Comment(models.Model):
   '''チュートリアルに対するコメント'''
-  name = models.CharField('お名前', max_length=30, default='名無し')
   text = models.TextField('本文')
+  user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='post_user', blank=True, null=True)
   tutorial = models.ForeignKey(Tutorial, verbose_name='紐づく記事', on_delete=models.PROTECT)
   created_at = models.DateField('作成日', default=timezone.now)
   
