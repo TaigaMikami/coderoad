@@ -20,6 +20,9 @@ class Tutorial(models.Model):
   category = models.ManyToManyField(
     Category, verbose_name='カテゴリ',
   )
+  user = models.ManyToManyField(
+    User, verbose_name='カテゴリ',
+  )
 
   def __str__(self):
     return self.title

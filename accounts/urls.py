@@ -16,6 +16,7 @@ urlpatterns = [
   path('login/', views.LoginView.as_view(), name='login'),
   path('logout/', views.LogoutView.as_view(), name='logout'),
   path('', views.IndexView.as_view(), name='index'),
+  path('mytutorial/', views.mytutorial, name='mytutorial'),
 
   # path('password_change/', PasswordChangeView.as_view(), name='password_change'),
   # path('password_change/done/', PasswordChangeDoneView.as_view(), name='password_change_done'),

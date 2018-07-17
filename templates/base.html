@@ -14,7 +14,11 @@
 	<title>coderoad</title>
 	
 	<!-- Bootstrap Core CSS -->
-	<link href="{% static 'vendor/bootstrap/css/bootstrap.css' %}" rel="stylesheet">
+	<link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+	<link href="{% static 'vendor/bootstrap/css/mdb.min.css' %}" rel="stylesheet">
+	<link href="{% static 'vendor/bootstrap/css/style.css' %}" rel="stylesheet">
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
 	<!-- Custom CSS -->
 	<link href="{% sass_src 'css/coderoad.scss' %}" rel="stylesheet">
@@ -38,8 +42,13 @@
 <!-- Navigation -->
 {% include "navi.html" %}
 
-{% include "hero.html" %}
+<!--Main layout-->
+<main class="mt-5 pt-5">
+	<div class="container">
 
+{% include "hero.html" %}
+		<hr class="my-5">
+		<section class="text-center">
 <div class="container">
 	<div class="row">
 		<div class="col-md-10">
@@ -58,15 +67,19 @@
 		</div>
 	</div>
 </div>
-
+		</section>
+	</div>
+</main>
 <!-- footer -->
 {% include "footer.html" %}
 
 <!-- jQuery -->
-<script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+<script src="{% static 'vendor/jquery/jquery-3.3.1.min.js' %}"></script>
 
 <!-- Bootstrap Core JavaScript -->
+<script src="{% static 'vendor/bootstrap/js/popper.min.js' %}"></script>
 <script src="{% static 'vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+<script src="{% static 'vendor/bootstrap/js/mdb.min.js' %}"></script>
 
 </body>
 

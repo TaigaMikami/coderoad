@@ -8,6 +8,8 @@ from django.contrib.auth.views import (
 )
 from django.views import generic
 from .forms import LoginForm
+from django.contrib.auth import get_user_model
+User = get_user_model()
 
 class IndexView(generic.TemplateView):
   template_name = 'accounts/index.html'
@@ -28,6 +30,14 @@ def signup(request):
   }
   return render(request, 'accounts/signup.html', context)
 
+# def mytutorial(request):
+#   tutorials = User.objects.get(id=request.user.id)
+#   import pdb; pdb.set_trace()
+#   params = {
+#     'tutorials': tutorials,
+#   }
+#   return render(request, 'accounts/mytutorial.html', params)
+
 class LoginView(LoginView):
   """ログインページ"""
   form_class = LoginForm
@@ -37,3 +47,13 @@ class LoginView(LoginView):
 class LogoutView(LoginRequiredMixin, LogoutView):
   """ログアウトページ"""
   template_name = 'tutorial/tutorial_list.html'
+
+
+def mytutorial(request):
+  tutorials = User.objects.get(id=request.user.id).tutorial_set.all()
+
+  params = {
+    'tutorials': tutorials,
+  }
+  # import pdb; pdb.set_trace()
+  return render(request, 'accounts/mytutorial.html', params)

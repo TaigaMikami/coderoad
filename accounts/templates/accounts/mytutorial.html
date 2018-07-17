@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+	<h1>あなたのチュートリアル</h1>
+	<div class="row mb-4 wow fadeIn">
+	{% for tutorial in tutorials %}
+		<!--Grid column-->
+		<div class="col-lg-4 col-md-6 mb-4">
+			<!--Card-->
+			<div class="card">
+
+				<!--Card image-->
+				<h4 class="card-header bg-pre-pink text-white">{{ tutorial.title }}</h4>
+
+				<!--Card content-->
+				<div class="card-body">
+					<!--Text-->
+					{% for tag in tutorial.category.all %}
+						<label for="" class="btn-sm bg-info text-white">{{ tag.name }}</label>
+					{% endfor %}
+					<p class="card-text">Learn how to create a smart website which learns your user and reacts properly to his behavior.</p>
+					<p>☆×<label for="">{{ tutorial.star }}</label></p>
+					<a href="{% url 'tutorial:detail_and_create' tutorial.pk %}" class="btn bg-pre-pink btn-md">続きを見る
+						<i class="fa fa-play ml-2"></i>
+					</a>
+				</div>
+
+			</div>
+			<!--/.Card-->
+		</div>
+	{% endfor %}
+	</div>
+{% endblock %}

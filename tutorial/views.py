@@ -5,6 +5,8 @@ from django.views import generic
 from .forms import CommentCreateForm
 from django import forms
 from .models import Tutorial, Category, Comment
+from django.contrib.auth import get_user_model
+User = get_user_model()
 
 class IndexView(generic.ListView):
   template_name = 'tutorial/tutorial_list.html'
@@ -53,3 +55,5 @@ class DetailAndCreate(generic.edit.ModelFormMixin, generic.DetailView):
     else:
       self.object = self.get_object()
       return self.form_invalid(form)
+
+
